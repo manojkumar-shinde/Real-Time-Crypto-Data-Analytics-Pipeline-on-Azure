@@ -1,0 +1,43 @@
+Dynamic Git to Azure Data Lake Pipeline (Azure Data Factory)
+
+Pipeline Workflow (Step-by-Step)
+Step 1: Create Linked Services
+
+Created HTTP Linked Service to connect with GitHub raw files
+Created Azure Data Lake Linked Service for storage
+
+Step 2: Create Parameterized Source Dataset
+
+Created a dataset for GitHub CSV files
+Used dynamic parameter for relative URL
+Enabled dynamic file selection
+
+Step 3: Create Parameterized Sink Dataset
+
+Created a dataset for Azure Data Lake
+Used parameters for:
+Folder name
+File name
+Configured Bronze layer storage path
+
+Step 4: Build Lookup Activity
+
+Added a Lookup activity to read metadata
+Lookup returns a list of file paths to process
+Acts as input for dynamic looping
+
+Step 5: Implement ForEach Activity
+
+Used ForEach activity to iterate over file list
+Enables processing of multiple files dynamically
+
+Step 6: Add Copy Data Activity
+
+Placed inside ForEach loop
+Copies data from GitHub to Data Lake
+Uses dynamic dataset parameters
+
+Step 7: Validate and Publish Pipeline
+
+Validated pipeline configuration
+Published changes in Azure Data Factory
