@@ -1,4 +1,4 @@
-# 🚀 Azure End-to-End Data Engineering Project
+# 🚀 Azure End-to-End Data Engineering Pipeline Project
 
 ![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)
 ![Databricks](https://img.shields.io/badge/Databricks-FF3621?style=for-the-badge&logo=databricks&logoColor=white)
